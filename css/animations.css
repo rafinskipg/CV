@@ -19,9 +19,7 @@
 	-webkit-transform: translateZ( 0px );
 	   -moz-transform: translateZ( 0px );
 	        transform: translateZ( 0px );
-}
 
- .description.show{
 	-webkit-animation: show-right 1s forwards ease;
 	   -moz-animation: show-right 1s forwards ease;
 	        animation: show-right 1s forwards ease;
