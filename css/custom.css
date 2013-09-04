@@ -1,5 +1,5 @@
 body{
-  color: rgb(130, 179, 241); overflow:hidden;
+  color: rgb(130, 179, 241); overflow-x:hidden;
   /*font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;*/
 }
 img{
@@ -17,7 +17,7 @@ overflow: hidden;
 #logo.bg .first{
     opacity: 0.2;
 }
-#picture, #picture2, #picture3{
+.no-touch  #picture,.no-touch  #picture2,.no-touch  #picture3{
   visibility: hidden;
   height: 100px;
 }
@@ -46,7 +46,7 @@ overflow: hidden;
   background-repeat: no-repeat; 
   background-size:contain;
   height:100px;
-  width: 80px;
+
  }
  #twitter{
   background-image: url('../img/twitter.png');
@@ -122,6 +122,7 @@ ul.menu li a:hover{  text-decoration:none; }
   padding: 10px;
  }
  
+ 
  #descriptions .description img{
   height: 150px;
   width: 100%;
@@ -132,14 +133,17 @@ ul.menu li a:hover{  text-decoration:none; }
 
 /*Experiments*/
 #experiments .experiment p{
-  display:none;
+ 
   position: absolute;
   top: 60px;
   left: 10px;
   background: rgba(17, 17, 25, 0.72);
   padding: 10px;
  }
-#experiments p.show{
+ .no-touch  #experiments .experiment p{
+  display:none
+ }
+.no-touch #experiments p.show{
  
    -webkit-animation: show-top 1s forwards ease;
 	   -moz-animation: show-top  1s forwards ease;

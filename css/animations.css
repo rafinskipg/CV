@@ -8,14 +8,16 @@
 	        transform-style: preserve-3d;
 }
 
-.description{
+.no-touch .description{
 	-webkit-transform: translateZ( -100px );
 	   -moz-transform: translateZ( -100px );
 	        transform: translateZ( -100px );
 }
-
 .description.show {
   visibility:visible !important;
+}
+.no-touch .description.show {
+  
 	-webkit-transform: translateZ( 0px );
 	   -moz-transform: translateZ( 0px );
 	        transform: translateZ( 0px );

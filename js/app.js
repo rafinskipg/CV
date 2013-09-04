@@ -9,20 +9,20 @@
         var destination = $(this).find('a').attr('href');
         console.log(destination);
         if(!$(destination).hasClass('show')){
-          $('#descriptions div.show').removeClass('show').addClass('hide');
-          $(destination).removeClass('hide').addClass('show');
+          $('#descriptions div.show').removeClass('show');
+          $(destination).addClass('show');
         }
       });
       
       //Make the descriptions fancy
-      $('#experiments .experiment').hover(   function(){
+      $('.no-touch  #experiments .experiment').hover(   function(){
         $(this).find('p').addClass('show');
       }, function(){
         $(this).find('p').removeClass('show');
       });
       
       //Show images on top
-      $('#logo').hover(   function(){
+      $('.no-touch #logo').hover(   function(){
         $('#logo').addClass('bg');
         $('.responsive-badge').addClass('show');
       }, function(){
@@ -35,6 +35,12 @@
 
 //Rafael Pedrola
 $(document).ready(function(){
+ if (!("ontouchstart" in document.documentElement) && window.innerWidth > 770) {
+  document.documentElement.className += " no-touch";
+  }
  var app = new CV();
  app.addBindings();
+ 
+  
 });
+//Check compatibility
